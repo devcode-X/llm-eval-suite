@@ -1,0 +1,32 @@
+[
+  {
+    "question": "What causes transformer models to hallucinate?",
+    "answer": "Transformer models hallucinate when they generate text that is statistically plausible but not grounded in their training data or the provided context. This happens due to the model's tendency to complete patterns rather than verify factual accuracy.",
+    "context": "Large language models based on the transformer architecture hallucinate when they produce outputs that sound fluent and plausible but are not supported by the provided context or factual knowledge. This is often caused by the model optimizing for token-level probability rather than truthfulness.",
+    "expected": "Hallucinations occur because models optimize for statistical plausibility over factual accuracy, completing patterns without grounding in context."
+  },
+  {
+    "question": "What is the purpose of LangSmith in LLM development?",
+    "answer": "LangSmith is an observability and evaluation platform for LLM applications. It enables developers to trace agent executions, capture tool calls and model responses, run evaluations against ground-truth datasets, and monitor production LLM apps for quality and latency.",
+    "context": "LangSmith is a platform by LangChain for debugging, testing, evaluating, and monitoring LLM applications. It provides tracing for all LLM calls and chain executions, dataset management for evaluation, and dashboards for tracking model quality metrics over time.",
+    "expected": "LangSmith provides tracing, evaluation, and monitoring for LLM applications to support debugging and quality tracking."
+  },
+  {
+    "question": "How does RAG reduce hallucinations?",
+    "answer": "Retrieval-Augmented Generation (RAG) reduces hallucinations by grounding the model's response in retrieved external documents. Instead of relying purely on parametric memory, the model generates answers conditioned on retrieved context, making it less likely to fabricate information.",
+    "context": "RAG (Retrieval-Augmented Generation) is a technique that combines information retrieval with language generation. By providing the model with relevant documents at inference time, RAG grounds responses in factual external knowledge, significantly reducing hallucinations compared to pure generative approaches.",
+    "expected": "RAG reduces hallucinations by grounding responses in retrieved external documents rather than relying on parametric memory."
+  },
+  {
+    "question": "What metrics are used to evaluate agent reliability?",
+    "answer": "Agent reliability is typically measured using task completion rate, tool selection accuracy, hallucination rate, response consistency across runs, and latency. LLM-as-a-Judge approaches are commonly used to score subjective dimensions like response quality and faithfulness.",
+    "context": "Evaluating AI agent reliability involves multiple metrics: task completion rate measures whether agents successfully finish assigned tasks; tool selection accuracy checks if the right tools are called with correct parameters; hallucination rate tracks unsupported factual claims; consistency measures variance across repeated runs on identical inputs.",
+    "expected": "Key metrics include task completion rate, tool selection accuracy, hallucination rate, and response consistency."
+  },
+  {
+    "question": "What is the difference between online and offline LLM evaluation?",
+    "answer": "Offline evaluation runs against static datasets during development or CI/CD to catch regressions before deployment. Online evaluation monitors live production traffic in real time, flagging issues as they occur. Offline is proactive and systematic; online is reactive and continuous.",
+    "context": "LLM evaluation can be done offline or online. Offline evaluation uses predefined datasets and runs during development or CI pipelines to detect prompt or model regressions. Online evaluation monitors production traffic, using sampling and automated judges to detect issues like hallucinations or quality drops in real time.",
+    "expected": "Offline evaluation uses static datasets pre-deployment; online evaluation monitors live production traffic continuously."
+  }
+]
